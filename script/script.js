@@ -5,9 +5,9 @@ const gebruikers = [
   { id: 4, login: "jos.teugels", leeftijd: 13 },
   { id: 5, login: "piet.pollekes", leeftijd: 27 },
 ];
-//
+//variables
 const loginGegevens = document.querySelector("#login")
-const leeftijd = document.querySelector("#leeftijd")
+const leeftijdGegevens = document.querySelector("#leeftijd")
 const toevoegen = document.querySelector("#toevoegen")
 const jonger = document.querySelector("#jonger")
 const ouder = document.querySelector("#ouder")
@@ -17,7 +17,9 @@ const lijstNamen = document.querySelector("#lijstNamen")
 //toevoegen knop
 toevoegen.addEventListener("click", () =>{
   console.log(loginGegevens.value);
-  gebruikers.push(loginGegevens)
+  console.log(leeftijdGegevens.value);
+  
+  gebruikers.push(login = loginGegevens.value, leeftijd = leeftijdGegevens.value)
   console.log(gebruikers);
   
 })
@@ -26,11 +28,9 @@ console.log(gebruikers[1].login);
 jonger.addEventListener("click",()=>{
   for (let i = 0; i < gebruikers.length; i++) {
     if (filterLeeftijd.value > gebruikers[i].leeftijd) {
-    //console.log(filterLeeftijd[i].login);
+    console.log("hallo");
+    lijstNamen.textContent += gebruikers[i].leeftijd
   }
   }
 })
-  lijstNamen.textContent = "hoi"
-
-
-
+lijstNamen.innerHTML = "test"
